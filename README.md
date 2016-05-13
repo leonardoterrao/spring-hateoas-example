@@ -1,3 +1,31 @@
+# Spring HATEOAS
+
+Este é um projeto simples que demonstra como o Spring HATEOAS funciona.
+
+Link oficial da ferramenta: http://projects.spring.io/spring-hateoas/
+
+#### O que é o HATEOAS?
+HATEOAS (Hypermidia as the Engine of Application State) é uma abordagem para a construção de web services RESTful onde o cliente pode descobrir dinamicamente as ações disponíveis a ele no servidor em tempo de execução. As opções de ações disponíveis podem ser conduzidos por estados no tempo (por exemplo, diferentes ações disponíveis para o usuário de acordo com o controle de acesso) ou por funcionalidades disponíveis (por exemplo, uma nova funcionalidade fica disponível).
+
+O exemplo abaixo mostra o objeto JSON que representa um livro em uma biblioteca. Temos as informações, os links que representam as informaç~oes e a ação de empresar o livro.
+```json
+{
+   "id": 1,
+   "title": "Book One",
+   "author":    {
+      "id": 1,
+      "name": "Author X"
+   },
+   "stockLevel": 2,
+   "_links":    {
+      "self":       [
+         {"href": "http://localhost:8080/book/1"},
+         {"href": "http://localhost:8080/author/1"}
+      ],
+      "book.borrow": {"href": "http://localhost:8080/book/borrow/1"}
+   }
+}
+```
 
 #### Benefício
 Temos a capacidade de incluir links com informações de estado:
