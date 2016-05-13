@@ -44,14 +44,18 @@ Como pode o aplicativo do cliente decidir quando mostrar o botão "Cancelar"? Te
 O que acontece se o processo mudar? Um novo status permite cancelar o pedido, quando estiver "em preparação". O antigo cliente não é mais compatível.
 A hypermedia API pode incluir um link para a ação cancelar. O server decide quando adicionar o link. O cliente tem que saber o significado do "cancelar" (deve ser documentado) e exibir o botão quando o link estiver lá. Sem lógica de negócios muda, se a lógica muda, o cliente não requer nenhuma mudança.
 
+#### Limitação
+ - Sem suporte ao "template links" (por exemplo: http://localhost:8080/book/{id}, id é uma variavel que deve ser preenchida pelo cliente).
+
+### Executando o projeto:
+
 Para executar o exemplo do projeto basta clocar o repositório e rodar os comandos:
 
 ```sh
     mvn clean package
     mvn spring-boot:run
 ```
-#### Limitação
- - Sem suporte ao "template links" (por exemplo: http://localhost:8080/book/{id}, id é uma variavel que deve ser preenchida pelo cliente).
+
 
 
 Referências:
