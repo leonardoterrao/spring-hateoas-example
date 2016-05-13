@@ -49,11 +49,11 @@ A hypermedia API pode incluir um link para a ação cancelar. O server decide qu
 
 ### Executando o projeto:
 
-Para executar o exemplo do projeto basta clocar o repositório e rodar os comandos:
+Para executar o exemplo do projeto basta clocar o repositório e rodar os comandos via terminal dentro da pasta do projeto:
 
 ```sh
-    mvn clean package
-    mvn spring-boot:run
+$ mvn clean package
+$ mvn spring-boot:run
 ```
 
 
